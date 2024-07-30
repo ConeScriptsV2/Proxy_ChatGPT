@@ -15,7 +15,7 @@ app.post('/chatgpt', async (req, res) => {
         const response = await axios.post('https://api.openai.com/v1/chat/completions', req.body, {
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`
+                'Authorization': `Bearer sk-proj-NOG3CkFcpvDaqNIeoIP6T3BlbkFJKVuHQbLaesabGnTtyinh`
             }
         });
         res.json(response.data);
