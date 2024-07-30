@@ -6,6 +6,12 @@ const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 
+// Root URL route
+app.get('/', (req, res) => {
+    res.send('OpenAI Proxy Server is running.');
+});
+
+// ChatGPT endpoint
 app.post('/chatgpt', async (req, res) => {
     try {
         const response = await axios.post('https://api.openai.com/v1/chat/completions', req.body, {
